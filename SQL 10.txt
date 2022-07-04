@@ -1,0 +1,8 @@
+1) SELECT ename,sal from Employee e1 where 
+        4 = (SELECT COUNT(DISTINCT sal)from Employee e2 where e2.sal > e1.sal) 
+2) SELECT *
+   FROM employees
+   WHERE salary IN
+       (SELECT salary
+        FROM employees e
+        WHERE employees.emp_id <> e.emp_id);
